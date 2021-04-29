@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<style>
+    /* Remove default bullets (remover marcadores padrão) */
+    ul,
+    #myUl {
+        list-style-type: none;
+    }
+
+    /* Remove margins and padding from the parent ul */
+    /*remova as margens e preenchimento do ul pai*/
+    #myUl {
+        margin: 0;
+        padding: 0;
+    }
+
+    /* Style the caret/arrow */
+    /*estilize a seta circunflexa*/
+    .pasta {
+        cursor: pointer;
+        user-select: none;
+        /* Prevent text selection */
+    }
+
+    /* Create the caret/arrow with a unicode, and style it */
+    /*Crie o acento circunflexo / seta com um Unicode e estilize-o*/
+    .pasta::before {
+        content: "\25B6";
+        color: black;
+        display: inline-block;
+        margin-right: 6px;
+    }
+
+    /* Rotate the caret/arrow icon when clicked on (using JavaScript) */
+    /*Gire o ícone circunflexo / seta quando clicado (usando JavaScript)*/
+    .pasta-down::before {
+        transform: rotate(90deg);
+    }
+
+    /* Hide the nested list */
+    /*Esconder a lista aninhada*/
+    .arquivo {
+        display: none;
+    }
+
+    /* Show the nested list when the user clicks on the caret/arrow (with JavaScript) */
+    /*Mostra a lista aninhada quando o usuário clica no acento circunflexo / seta (com JavaScript)*/
+    .active {
+        display: block;
+    }
+</style>
+
+<h1>Projeto</h1>
+<ul id="myUl" class="tree">
+    <li><span class="pasta">Backend</span>
+        <ul>
+            <li><span class="pasta">App</span>
+                <ul class="arquivo">
+                    <li>produto.js</li>
+                    <li>usuario.js</li>
+                    <li>venda.js</li>
+                </ul>
+            </li>
+            <li><span class="pasta">Config</span>
+                <ul class="arquivo">
+                    <li>banco.js</li>
+                    <li>rotas.js</li>
+                    <li>servidor.js</li>
+                </ul>
+            </li>
+        </ul>
+    </li>
+    <li><span class="pasta">Frontend</span>
+        <ul>
+            <li><span class="pasta">Public</span>
+                <ul class="arquivo">
+                    <li>app.css</li>
+                    <li>app.js</li>
+                    <li>index.html</li>
+                </ul>
+            </li>
+        </ul>
+    </li>
+</ul>
+<!--
+<link rel="stylesheet" href="http://files.cod3r.com.br/curso-web/tree.css">
+-->
+<script>
+    var toggler = document.getElementsByClassName("pasta");
+    var i;
+
+    for (i = 0; i < toggler.length; i++) {
+        toggler[i].addEventListener("click", function () {
+            this.parentElement.querySelector(".arquivo").classList.toggle("active");
+            this.classList.toggle("pasta-down");
+        });
+    }
+</script>

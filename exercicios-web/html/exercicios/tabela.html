@@ -1,0 +1,67 @@
+<table>
+    <caption>Produtos</caption>
+    <!-- defini a area que vou colocar o cabeçalho da tabela -->
+    <thead>
+        <!-- defini uma linha  -->
+        <tr> 
+            <!--para cada coluna terei um table head th  -->
+            <th>Produto</th>
+            <th>Preço</th>
+            <th>Quantidade</th>
+            <th>Total</th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr>
+            <!-- defini uma linha de registro da nossa tabela -->
+            <td>Ipad</td>
+            <td>3289,00</td>
+            <td>5,000</td>
+            <td>16445,00</td>
+        </tr>
+        <tr>
+            <td>Samsung s9</td>
+            <td>2649,00</td>
+            <td>8,000</td>
+            <td>2192,00</td>
+        </tr>
+    </tbody>
+    <tfoot>
+        <tr>
+            <!-- colspan mescla colunas neste caso estamos utilizando 3 colunas -->
+            <!-- rowspan passa utilizar duas linhas -->
+            <td colspan="3" rowspan="2">Total</td>
+            <td>37637,00</td>
+        </tr>
+        <tr>
+            <td>Teste</td>
+        </tr>
+    </tfoot>
+</table>
+
+<style>
+    table {
+        border-collapse: collapse;
+    }
+    th, td {
+        padding: 10px; /**damos espaçamento entre linhas da tabela*/
+    }
+    thead tr {
+        border-bottom: solid 3px #444; /*aqui definimos uma borda mais grossa após nome das nossa colunas*/
+    }
+    /*no corpo da tabela quando o mouse pasar por cima das linhas, vamos mudar a cor*/
+    tbody tr:hover {
+        background-color: #dedede;
+    }
+
+    tfoot {
+        background-color: #444;
+        color: #fff;
+        font-weight: bold;
+        border-style: solid;
+    }
+    tfoot tr td {
+        border-style: groove ;
+    }
+
+</style>
