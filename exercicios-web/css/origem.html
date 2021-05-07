@@ -5,11 +5,17 @@
     <meta charset="UTF-8">
     <title>Origem CSS: Externo, Interno e Inline</title>
     <style>
-        /* ... */
+        body {
+            background-color: aquamarine;
+            color: black;
+        }
     </style>
+    <link rel="stylesheet" href="css/externo.css"> <!--aqui utilizando referencia ao arquivo externo-->
+    <!-- como neste exemplo a preferencia de cor é a ultima aplicada, se for in-line ela tem preferencia nas demais sempre-->
 </head>
 
-<body>
+<!--exemplo utilizando estilo in-line não recomendado-->
+<body style="background-color: coral;">
     <h1>E agora?</h1>
 </body>
 
