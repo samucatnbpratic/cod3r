@@ -6,8 +6,99 @@
     <title>CSS Selectors</title>
     <link rel="stylesheet" href="css/tag.css">
     <style>
-        /* ... */
-    </style>
+        /* '*' exemplo de seletor universal 
+        * {
+            color: #ff0;
+            background-color:  #f77;
+        }
+        */
+
+        /* .tag -  seletor aplica estilo a class tag - 
+        .tag {
+            color: blue;
+            background-color: skyblue;
+        }
+        */
+
+        /* #aprovados -  seletor aplica estilo ao id 'aprovados' - 
+        #aprovados {
+            color: red;
+            background-color: sandybrown;
+        }
+        */
+
+        /* #aninhado > div -  seletor aplica estilo ao div que é filho direto do id 'aninhado' - 
+        #aninhado > div {
+            color: black;
+            background-color: darkkhaki;
+        }
+        */
+
+        /* #aninhado section -  seletor aplica estilo a qualquer section que esteja dentro de um id 'aninhado' - 
+        #aninhado  section {
+            color: darkmagenta;
+            background-color: dimgrey;
+        }
+        */
+
+        /*p + ul -  seletor aplica estilo a ul que está logo após a tag p  
+        p + ul {
+            color: forestgreen;
+            background-color: rgb(209, 218, 131);
+        }
+        */
+
+        /*p ~ ol -  seletor aplica estilo a qualquer tag ol que está contido na tag p  
+        p ~ ol {
+            color: forestgreen;
+            background-color: rgb(209, 218, 131);
+        }
+        */
+
+        /*[feira] -  seletor aplica estilo a todos elementos com propriedade [feira]
+        [feira] {
+            color: forestgreen;
+            background-color: rgb(209, 218, 131);
+        }
+        */
+
+        /*[feira~=escritorio] -  seletor aplica estilo a todos elementos com propriedade [feira] 
+                    onde parte valor = 'escritorio' (obs: tem que ter espaço do resto)  
+        [feira~=escritorio] {
+            color: forestgreen;
+            background-color: rgb(209, 218, 131);
+        }
+        */
+
+        /*[feira*=sa] -  seletor aplica estilo a todos elementos com propriedade [feira] 
+                    onde valor contenha 'sa' (obs: pega qualquer parte do valor)  
+        [feira*=sa] {
+            color: forestgreen;
+            background-color: rgb(209, 218, 131);
+        }
+        */
+
+        /*span:nth-child(1) -  seletor aplica estilo ao primeiro span encontrado como filho 
+       span:nth-child(1) {
+            color: forestgreen;
+            background-color: rgb(209, 218, 131);
+        }
+        */
+
+        /*section > :nth-child(odd) -  seletor aplica estilo a todos elementos filhos impares dentro de uma section 
+        section > :nth-child(odd) {
+            color: forestgreen;
+            background-color: rgb(209, 218, 131);
+        }
+        */
+
+        /*section > span:nth-of-type(2) -  seletor aplica estilo ao segundo elemento do tipo span */
+        section > span:nth-of-type(2) {
+            color: forestgreen;
+            background-color: rgb(209, 218, 131);
+        }
+
+</style>
 </head>
 
 <body>
@@ -29,7 +120,7 @@
             </ol>
             <div id='aninhado' class='tag'>
                 <div class="tag">
-                    <section class='tag'>
+                    <section class='tag nolabel'>
                         <span class='tag'>1</span>
                         <p class='tag'>2</p>
                         <span class='tag'>3</span>
