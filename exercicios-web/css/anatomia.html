@@ -13,9 +13,28 @@
             border: solid 5px navy; /*shorthand property (propriedades de acesso mais rapido)*/
             font-family: helvetica, monospace, sans-serif; /*se a primeira não estiver instalada, pega a segunda...etc*/
             /*funções - que podemos utilizar CSS*/
-            width: calc(100% - 40px);
+            width: calc(100% - 40px); /*defini 100% da tela diminiuindo 40 pixels*/
             background-color: rgb(34,153,189); /*(RGB = red, green, blue)*/
         }
+
+        /*Usando uma pseudo-classe (neste caso ao passar o mouse em cima muda a cor)*/
+        .seletor:hover {
+            background-color: orangered;
+        }
+        /*Usando um pseudo-elemento (aqui alteramos a primeira letra de um elemento)*/
+        .seletor::first-letter {
+            font-size: 60px;
+            font-weight: bold;
+        }
+        /* padrão de nomenclatura 
+        
+           dash-case ou camelCase ? 
+
+           dash-case = é muito utilizado no mundo javascript 
+
+           escolha um padrão e mantenha ele em seu projeto
+
+        */
     </style>
 </head>
 
