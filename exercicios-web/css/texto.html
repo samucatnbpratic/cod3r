@@ -16,6 +16,63 @@
             flex-direction: column;
             align-items: center;
         }
+
+        div {
+            font-size: 50px;
+        }
+
+        p {
+            /* valores padroes */
+            font-size: 1em;
+            font-size: 100%;
+            font-size: 16px;
+            font-size: 12pt;
+            
+            /* unidades absolutas */
+            font-size: 100px; /* tamanho do pixel é relativo*/
+            font-size: 72pt; /* pontos é uma polegada */
+            font-size: 1in; /* polegada */
+
+            /*unidades relativas */
+            font-size: 2.2em; /* pega a ref. de codigo mais proximo*/
+            font-size: 2.2rem;  /* usa a ref. raiz como padrão */
+            font-size: 50vh; /* altura do viewport */
+            font-size: 10vw; /* largura do viewport */
+
+            font-family: monospace;
+            font-family: Georgia, 'Times New Roman', Times, serif; /* procura a primeira se não achar vai para segunda, e assim por diante*/
+            font-family: Verdana, Geneva, Tahoma, sans-serif;
+            font-family: 'Indie Flowerr', cursive;
+
+            font-weight: 100;
+            font-style: italic;
+            text-transform: uppercase;
+            text-decoration: overline underline;
+            word-spacing: 10px; /* espaço entre as palavras*/
+            letter-spacing: 20px; /*separação entre as letras da palavra */
+            text-align: center; /* alinhamento do texto */
+
+
+        }
+
+        .botao {
+            font-size: 28px;
+            text-decoration: none;
+            padding:  10px 30px;
+            border-radius: 25px;
+
+        }
+
+        .destaque {
+            color: #fff;
+            background: tomato;
+            box-shadow: 2px 2px 1px 1px #000;
+        }
+
+        .destaque:active{
+            box-shadow: none;
+
+        }
     </style>
 </head>
 
