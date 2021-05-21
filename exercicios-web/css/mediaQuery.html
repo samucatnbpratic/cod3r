@@ -12,6 +12,17 @@
             border: solid 5px;
             display: none;
         }
+        /* só vai mostrar o display da nossa classe se a largura for no maximo 600px*/
+        @media (max-width: 600px) {
+            .muito-pequeno {display: block;}
+        }
+        @media (max-width: 1000px), (orientation: portrait) {
+            .pequeno-retrato {display: block;}
+        }
+        @media (min-width: 500px) and (max-width: 1000px) {
+            .intervalo {display: block;}
+        }
+
     </style>
 </head>
 <body>
